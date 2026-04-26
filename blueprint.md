@@ -13,16 +13,13 @@ This application provides a visually engaging experience for drawing lottery num
 *   **Responsive Design:** The layout adapts perfectly to both desktop and mobile screens.
 *   **Interactivity:** A single, clear "Start Draw" button initiates the process. The button is disabled during the draw to prevent re-triggering.
 *   **Wow Button:** A special button that, when clicked, triggers a fun "당첨입니다" (Bingo/Winner) alert.
+*   **Partnership Inquiry Form:** A functional form integrated with **Formspree** allowing users to send partnership inquiries directly to the site owner.
 
-## Current Plan: Add Theme Toggle (Dark/Light Mode)
+## Current Plan: Add Partnership Inquiry Form
 
-1.  **Update `style.css`:**
-    *   Defined theme variables in `:root`.
-    *   Added `.light-mode` class to override variables for a light theme.
-    *   Added transitions for smooth color switching.
-    *   Styled the `.theme-toggle` button.
-2.  **Update `index.html`:**
-    *   Added a `<button>` with ID `theme-toggle`.
-3.  **Update `main.js`:**
-    *   Implemented logic to toggle `.light-mode` on `document.body`.
-    *   Added `localStorage` support to persist theme selection.
+1.  **Update `index.html`:**
+    *   Added a `<section>` with ID `partnership` containing the Formspree form.
+    *   Wrapped the lotto machine and form in a `.container` for better layout management.
+2.  **Update `style.css`:**
+    *   Updated `body` and added `.container` to handle scrollable content.
+    *   Added comprehensive styling for the partnership form, inputs, and submit button, fully integrated with the dark/light mode system.

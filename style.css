@@ -33,12 +33,20 @@ body {
     color: var(--text-color);
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh;
     margin: 0;
-    padding: 20px;
+    padding: 40px 20px;
     box-sizing: border-box;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
 }
 
 #lotto-machine {
@@ -166,6 +174,75 @@ header p {
 
 #wow-button:active {
     transform: translateY(-1px);
+}
+
+#partnership {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--machine-bg);
+    border-radius: 25px;
+    padding: 30px 40px;
+    box-shadow: 0 15px 40px var(--shadow-color);
+    border: 3px solid var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+#partnership h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--sub-text-color);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 2px solid var(--display-bg);
+    background-color: var(--display-bg);
+    color: var(--sub-text-color);
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+.submit-button {
+    width: 100%;
+    background: linear-gradient(145deg, #4ecdc4, #45b7af);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(78, 205, 196, 0.6);
 }
 
 @keyframes appear {
