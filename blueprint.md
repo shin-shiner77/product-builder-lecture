@@ -6,26 +6,23 @@ This application provides a visually engaging experience for drawing lottery num
 
 ## Design and Features
 
-*   **Modern, Dramatic UI:** The application uses a dark theme with a clean layout to create a premium and focused experience. The interface is designed to look like a self-contained "lotto machine."
+*   **Modern, Dramatic UI:** The application uses a default dark theme with a clean layout. It now supports both **Dark and Light modes** for user preference.
+*   **Theme Toggle:** A toggle button (🌓) allows users to switch between light and dark themes seamlessly. The preference is saved in `localStorage`.
 *   **Animated Number Draw:** Numbers are revealed sequentially with a delay and a subtle animation, building suspense for the user.
 *   **Color-Coded Balls:** To enhance visual feedback and mimic real lottery balls, each number is displayed in a colored circle corresponding to its number range (e.g., 1-10 are yellow, 11-20 are blue, etc.).
 *   **Responsive Design:** The layout adapts perfectly to both desktop and mobile screens.
 *   **Interactivity:** A single, clear "Start Draw" button initiates the process. The button is disabled during the draw to prevent re-triggering.
-*   **Accessibility:** The design follows a11y standards to ensure it is usable by everyone.
+*   **Wow Button:** A special button that, when clicked, triggers a fun "당첨입니다" (Bingo/Winner) alert.
 
-## Current Plan: UI and Animation Enhancement
+## Current Plan: Add Theme Toggle (Dark/Light Mode)
 
-This plan details the steps to upgrade the simple "Generator" into a more engaging "Drawing Site".
-
-1.  **Update `index.html`:**
-    *   Modify the title and header to reflect a "drawing site."
-    *   Restructure the layout to create a "lotto machine" container.
-2.  **Update `style.css`:**
-    *   Implement a dark theme with a new color palette and background.
-    *   Add styles for the "lotto machine" container.
-    *   Add animations for the number balls appearing.
-    *   Refine button and text styles for the new theme.
+1.  **Update `style.css`:**
+    *   Defined theme variables in `:root`.
+    *   Added `.light-mode` class to override variables for a light theme.
+    *   Added transitions for smooth color switching.
+    *   Styled the `.theme-toggle` button.
+2.  **Update `index.html`:**
+    *   Added a `<button>` with ID `theme-toggle`.
 3.  **Update `main.js`:**
-    *   Implement logic to reveal numbers one by one using a delay.
-    *   Add a helper function to assign colors to the number balls based on their value.
-    *   Disable and re-enable the "Start Draw" button during the animation.
+    *   Implemented logic to toggle `.light-mode` on `document.body`.
+    *   Added `localStorage` support to persist theme selection.

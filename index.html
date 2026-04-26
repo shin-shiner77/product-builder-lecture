@@ -8,12 +8,16 @@
 </head>
 <body>
     <div id="lotto-machine">
+        <button id="theme-toggle" class="theme-toggle" aria-label="테마 변경">🌓</button>
         <header>
             <h1>로또 번호 추첨</h1>
             <p>버튼을 눌러 행운의 번호를 확인하세요!</p>
         </header>
         <div id="numbers-display"></div>
-        <button id="draw-button">추첨 시작</button>
+        <div class="button-group">
+            <button id="draw-button">추첨 시작</button>
+            <button id="wow-button">Wow</button>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>

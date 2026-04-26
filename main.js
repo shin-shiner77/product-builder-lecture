@@ -1,6 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     const drawButton = document.getElementById('draw-button');
+    const wowButton = document.getElementById('wow-button');
     const numbersDisplay = document.getElementById('numbers-display');
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Theme logic
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        body.classList.add('light-mode');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+        localStorage.setItem('theme', currentTheme);
+    });
+
+    // Wow button event listener
+    wowButton.addEventListener('click', () => {
+        alert('당첨입니다');
+    });
 
     // Function to get the color for each ball based on the number
     const getBallColor = (number) => {
