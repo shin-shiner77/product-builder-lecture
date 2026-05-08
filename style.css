@@ -245,6 +245,19 @@ header p {
     box-shadow: 0 8px 20px rgba(78, 205, 196, 0.6);
 }
 
+#comments {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--machine-bg);
+    border-radius: 25px;
+    padding: 30px 40px;
+    box-shadow: 0 15px 40px var(--shadow-color);
+    border: 3px solid var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
 @keyframes appear {
     to {
         transform: scale(1);
